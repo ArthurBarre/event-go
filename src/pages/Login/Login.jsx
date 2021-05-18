@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import React, { useContext } from "react";
 // import * as styles from "./Login.module.scss";
 import UsersContext from "../../store/users-context";
+import Button from "../../components/Button/Button";
 
 // const c = classNames.bind(styles);
 
@@ -21,7 +22,9 @@ const Login = () => {
     <>
       <p>Login page</p>
       <Link to="/">Sign in</Link>
-      <button onClick={addUser}>Add user</button>
+      <Button loading={true} onClick={addUser}>
+        Add user
+      </Button>
     </>
   );
 };
