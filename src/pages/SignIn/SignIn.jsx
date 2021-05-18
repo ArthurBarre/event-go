@@ -1,16 +1,15 @@
-// import classNames from 'classnames/bind';
-import { Link } from "gatsby";
+import classNames from "classnames/bind";
+import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
-// import * as styles from './Signin.module.scss';
+import * as styles from './SignIn.module.scss';
 
-// const c = classNames.bind(styles);
+const c = classNames.bind(styles);
 
-// markup
 const Signin = () => {
   return (
     <>
-      <p>Signin page</p>
-      <Link to="/login">Alreayd have an account? Login</Link>
+      <StaticImage className={c('image')} src="../../images/illu.png" alt="illu"/>
+      <h1 className={c('title')}>Sign In</h1>
     </>
   );
 };

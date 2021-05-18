@@ -3,7 +3,10 @@ module.exports = {
     title: "event-and-go.front",
   },
   plugins: [
-    "gatsby-plugin-sass",
+    {
+			resolve: 'gatsby-plugin-sass',
+			options: { cssLoaderOptions: { camelCase: false } },
+		},
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     {
@@ -13,5 +16,7 @@ module.exports = {
       },
     },
     "gatsby-plugin-layout",
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
   ],
 };

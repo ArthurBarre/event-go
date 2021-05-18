@@ -12,7 +12,9 @@ const IndexPage = ({ children }) => {
   ]);
   return (
     <UsersContext.Provider value={{ users, setUsers }}>
-      <main className={c("wrapper")}>{children}</main>
+      <main className={c("wrapper")}>
+        {children}
+      </main>
     </UsersContext.Provider>
   );
 };
