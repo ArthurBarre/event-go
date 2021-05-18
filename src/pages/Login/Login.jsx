@@ -22,7 +22,13 @@ const Login = () => {
     <>
       <p>Login page</p>
       <Link to="/">Sign in</Link>
-      <Button loading={true} onClick={addUser}>
+      <Button
+        type="primary"
+        loading={true}
+        // disabled={true}
+        // size="small"
+        onClick={addUser}
+      >
         Add user
       </Button>
     </>

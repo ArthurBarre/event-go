@@ -2,24 +2,28 @@
 @import "./mixins";
 
 // Colors
-$primary: #266CB0;
-$secondary: #266CB0;
+$primary: #266cb0;
+$darkPrimary: #133e7e;
+$secondary: #266cb0;
 $white: #ffffff;
-$black: #1A181B;
+$black: #1a181b;
+$disabled: #e6dde8;
+$yellow: #ecc30b;
+$brown: #a98505;
 
-$success: #6BE09C;
-$warning: #F6BB58;
-$error: #EB4D4D;
+$success: #6be09c;
+$warning: #f6bb58;
+$error: #eb4d4d;
 
 // Fonts
 $termina: "Termina", sans-serif;
 
 $breakpoints: (
-	mobileM: 375px,
-	mobileL: 425px,
-	tablet: 768px,
-	laptop: 1024px,
-	laptopL: 1440px,
-	desktop: 1600px,
-	xxl: 1920px,
+  mobileM: 375px,
+  mobileL: 425px,
+  tablet: 768px,
+  laptop: 1024px,
+  laptopL: 1440px,
+  desktop: 1600px,
+  xxl: 1920px,
 );

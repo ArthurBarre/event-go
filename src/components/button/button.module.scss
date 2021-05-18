@@ -1,0 +1,88 @@
+@import "src/styles/variables";
+
+.wrapper {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  height: 34px;
+  font-size: 16px;
+  padding: 0px 8px;
+  border-radius: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  &:hover {
+    cursor: pointer;
+  }
+  &.small {
+    height: 24px;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+  &.big {
+    height: 37px;
+    font-size: 18px;
+    border-radius: 8px;
+  }
+
+  &.primary {
+    background-color: $primary;
+    color: $white;
+    &:hover {
+      background-color: $darkPrimary;
+    }
+    &.disabled {
+      background-color: $disabled;
+      border-color: $disabled;
+      &:hover {
+        background-color: $disabled;
+        cursor: not-allowed;
+      }
+    }
+  }
+  &.secondary {
+    background-color: $white;
+    border: 1px solid $primary;
+    color: $primary;
+    &:hover {
+      border: 1px solid $darkPrimary;
+      color: $darkPrimary;
+    }
+    &.disabled {
+      border-color: $disabled;
+      color: $disabled;
+      &:hover {
+        cursor: not-allowed;
+      }
+    }
+  }
+  &.terciary {
+    color: $yellow;
+    &:hover {
+      color: $brown;
+      cursor: pointer;
+    }
+    &.disabled {
+      color: $disabled;
+      &:hover {
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  fill: $white;
+  animation: rotate 4s linear infinite;
+  &.loading {
+    display: none;
+  }
+}

@@ -1,24 +1,21 @@
 import React from "react";
 import classNames from "classnames/bind";
 import PropTypes from "prop-types";
-import * as styles from "./Button.module.scss";
+import * as styles from "./button.module.scss";
+import Loader from "../../assets/loader.svg";
 
 const c = classNames.bind(styles);
 
 const Button = ({ children, disabled, size, loading, type, onClick }) => {
-  const sizes = {
-    small: "24px",
-    normal: "34px",
-    big: "37px",
-  };
   return (
     <div
       disabled={disabled}
       onClick={onClick}
-      loading={loading}
-      className={c("wrapper", { size: sizes[size], type })}
+      className={c("wrapper", size, { disabled }, type)}
     >
-      {loading && <div>loadingIcon</div>}
+      {loading && (
+        <img className={c("icon", { loading })} src={Loader} alt="loading" />
+      )}
       {children}
     </div>
   );
@@ -27,10 +24,17 @@ const Button = ({ children, disabled, size, loading, type, onClick }) => {
 export default Button;
 
 Button.propTypes = {
-  children: PropTypes.bool.isRequired,
+  children: PropTypes.node.isRequired,
+  onClick: PropTypes.func.isRequired,
   loading: PropTypes.bool,
+  size: PropTypes.string,
+  type: PropTypes.string,
+  disabled: PropTypes.bool,
 };
 
 Button.defaultProps = {
+  type: "primary",
+  size: "normal",
   loading: false,
+  disabled: false,
 };
