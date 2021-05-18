@@ -4,11 +4,11 @@ import * as styles from "./input.module.scss";
 
 const c = classNames.bind(styles);
 
-const Input = ({ type, label }) => {
+const Input = ({ type, label, placeholder }) => {
   return (
-    <div className={c("btn-wrapper")}>
+    <div className={c("btnWrapper")}>
       <label htmlFor="input">{label}</label>
-      <input type={type} id="input" />
+      <input className={c("",{isPassword: type === 'password'})} placeholder={placeholder} type={type} id="input" />
     </div>
   );
 };

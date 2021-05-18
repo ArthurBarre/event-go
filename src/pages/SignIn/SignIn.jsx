@@ -14,9 +14,10 @@ const Signin = () => {
         src="../../images/illu.png"
         alt="illu"
       />
-      <div className={c("flex-col")}>
+      <div className={c("flexCol")}>
         <h1 className={c("title")}>Sign In</h1>
-        <Input type="text" label="email"></Input>
+        <Input type="text" placeholder="Your@email.com" label="Email"></Input>
+        <Input type="password" placeholder="Mdp1234!" label="Password"></Input>
       </div>
     </>
   );

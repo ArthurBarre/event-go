@@ -10,13 +10,13 @@ $black: #1a181b;
 $disabled: #e6dde8;
 $yellow: #ecc30b;
 $brown: #a98505;
-
 $success: #6be09c;
 $warning: #f6bb58;
 $error: #eb4d4d;
+$neutral300: #B8AEBA;
 
 // Fonts
-$termina: "Termina", sans-serif;
+$termina: "Helvetica", sans-serif;
 
 $breakpoints: (
   mobileM: 375px,
@@ -27,3 +27,6 @@ $breakpoints: (
   desktop: 1600px,
   xxl: 1920px,
 );
+
+
+
