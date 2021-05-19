@@ -2,16 +2,18 @@ import React from "react";
 import classNames from "classnames/bind";
 import PropTypes from "prop-types";
 import * as styles from "./button.module.scss";
-import Loader from "../../assets/loader.svg";
+import Loader from "../../assets/loader.inline.svg";
 
 const c = classNames.bind(styles);
 
 const Button = ({ children, disabled, size, loading, type, onClick }) => {
   return (
-    <button onClick={onClick} className={c("button", size, { disabled }, type)}>
-      {loading && (
-        <img className={c("icon", { loading })} src={Loader} alt="loading" />
-      )}
+    <button
+      disabled={disabled}
+      onClick={onClick}
+      className={c("button", size, { disabled }, type)}
+    >
+      {loading && !disabled && <Loader className={c("icon", type)} />}
       {children}
     </button>
   );

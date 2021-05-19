@@ -21,7 +21,12 @@ const Signin = () => {
         <Input type="text" placeholder="Your@email.com" label="Email"></Input>
         <Input type="password" placeholder="Mdp1234!" label="Password"></Input>
 
-        <Button disabled={true} onClick={() => navigate("/login")}>
+        <Button
+          type="secondary"
+          // disabled={true}
+          // loading={true}
+          onClick={() => navigate("/login")}
+        >
           Sign in
         </Button>
       </div>

@@ -21,7 +21,7 @@
       border-color: var(--neutral-200);
       &:hover {
         background-color: var(--neutral-200);
-        // cursor: not-allowed;
+        cursor: not-allowed;
       }
     }
   }
@@ -33,13 +33,16 @@
     &:hover {
       border: 1px solid var(--app-darker);
       color: var(--app-darker);
+      & .icon > path {
+        fill: var(--app-darker);
+      }
     }
     &.disabled {
       border-color: var(--neutral-200);
       color: var(--neutral-200);
-      // &:hover {
-      //   cursor: not-allowed;
-      // }
+      &:hover {
+        cursor: not-allowed;
+      }
     }
   }
 
@@ -69,7 +72,7 @@
   height: 16px;
   margin-right: $spacing-xs;
   animation: rotate 4s linear infinite;
-  &.loading {
-    display: none;
+  &.secondary > path {
+    fill: var(--app-base);
   }
 }
