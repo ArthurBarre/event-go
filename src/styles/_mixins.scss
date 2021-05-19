@@ -44,7 +44,7 @@
 @mixin buttonPrimary {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  color: $primary;
+  font-size: 16px;
 }
 
 @mixin title {

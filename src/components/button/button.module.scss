@@ -6,13 +6,9 @@
   width: max-content;
   align-items: center;
   height: 34px;
-  font-size: 16px;
   padding: 0px $spacing-xs;
   border-radius: 8px;
   @include buttonPrimary;
-  &:hover {
-    cursor: pointer;
-  }
 
   &.primary {
     background-color: var(--app-base);
@@ -25,7 +21,7 @@
       border-color: var(--neutral-200);
       &:hover {
         background-color: var(--neutral-200);
-        cursor: not-allowed;
+        // cursor: not-allowed;
       }
     }
   }
@@ -41,9 +37,9 @@
     &.disabled {
       border-color: var(--neutral-200);
       color: var(--neutral-200);
-      &:hover {
-        cursor: not-allowed;
-      }
+      // &:hover {
+      //   cursor: not-allowed;
+      // }
     }
   }
 
