@@ -1,4 +1,5 @@
 @import "src/styles/variables";
+@import "src/styles/mixins";
 
 .button {
   display: flex;
@@ -6,63 +7,54 @@
   align-items: center;
   height: 34px;
   font-size: 16px;
-  padding: 0px 8px;
+  padding: 0px $spacing-xs;
   border-radius: 8px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
+  @include buttonPrimary;
   &:hover {
     cursor: pointer;
   }
-  &.small {
-    height: 24px;
-    font-size: 14px;
-    border-radius: 4px;
-  }
-  &.big {
-    height: 37px;
-    font-size: 18px;
-    border-radius: 8px;
-  }
 
   &.primary {
-    background-color: $primary;
-    color: $white;
+    background-color: var(--app-base);
+    color: var(--neutral-white);
     &:hover {
-      background-color: $darkPrimary;
+      background-color: var(--app-darker);
     }
     &.disabled {
-      background-color: $disabled;
-      border-color: $disabled;
+      background-color: var(--neutral-200);
+      border-color: var(--neutral-200);
       &:hover {
-        background-color: $disabled;
+        background-color: var(--neutral-200);
         cursor: not-allowed;
       }
     }
   }
+
   &.secondary {
-    background-color: $white;
-    border: 1px solid $primary;
-    color: $primary;
+    background-color: var(--neutral-white);
+    border: 1px solid var(--app-base);
+    color: var(--app-base);
     &:hover {
-      border: 1px solid $darkPrimary;
-      color: $darkPrimary;
+      border: 1px solid var(--app-darker);
+      color: var(--app-darker);
     }
     &.disabled {
-      border-color: $disabled;
-      color: $disabled;
+      border-color: var(--neutral-200);
+      color: var(--neutral-200);
       &:hover {
         cursor: not-allowed;
       }
     }
   }
-  &.terciary {
-    color: $yellow;
+
+  &.tertiary {
+    color: var(--secondary-base);
     &:hover {
-      color: $brown;
+      color: var(--secondary-darker);
       cursor: pointer;
     }
     &.disabled {
-      color: $disabled;
+      color: var(--neutral-200);
       &:hover {
         cursor: not-allowed;
       }
@@ -79,8 +71,7 @@
 .icon {
   width: 16px;
   height: 16px;
-  margin-right: 8px;
-  fill: $white;
+  margin-right: $spacing-xs;
   animation: rotate 4s linear infinite;
   &.loading {
     display: none;

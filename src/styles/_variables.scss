@@ -13,7 +13,31 @@ $brown: #a98505;
 $success: #6be09c;
 $warning: #f6bb58;
 $error: #eb4d4d;
-$neutral300: #B8AEBA;
+$neutral300: #b8aeba;
+
+:root {
+  --app-base: #266cb0;
+  --app-darker: #133e7e;
+  --secondary-base: #ecc30b;
+  --secondary-darker: #a98505;
+  --warning-base: #f6bb58;
+  --warning-darker: #b1752c;
+  --error-base: #eb4d4d;
+  --error-darker: #a9263d;
+  --success-base: #6be09c;
+  --success-darker: #35a178;
+  --neutral-black: #1a181b;
+  --neutral-300: #b8aeba;
+  --neutral-200: #e6dde8;
+  --neutral-white: #ffffff;
+}
+
+$spacing-xxs: "4px";
+$spacing-xs: "8px";
+$spacing-s: "16px";
+$spacing-m: "32px";
+$spacing-l: "48px";
+$spacing-xl: "96px";
 
 // Fonts
 $termina: "Helvetica", sans-serif;
@@ -27,6 +51,3 @@ $breakpoints: (
   desktop: 1600px,
   xxl: 1920px,
 );
-
-
-
