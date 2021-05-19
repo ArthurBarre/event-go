@@ -4,6 +4,7 @@ import React, { useContext } from "react";
 // import * as styles from "./Login.module.scss";
 import UsersContext from "../../store/users-context";
 import Button from "../../components/Button/Button";
+import { navigate } from "gatsby";
 
 // const c = classNames.bind(styles);
 
@@ -30,6 +31,14 @@ const Login = () => {
         onClick={addUser}
       >
         Add user
+      </Button>
+      <Button
+        type="secondary"
+        // disabled={true}
+        // size="small"
+        onClick={() => navigate("/")}
+      >
+        Login
       </Button>
     </>
   );

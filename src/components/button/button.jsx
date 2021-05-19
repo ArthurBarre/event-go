@@ -8,16 +8,12 @@ const c = classNames.bind(styles);
 
 const Button = ({ children, disabled, size, loading, type, onClick }) => {
   return (
-    <div
-      disabled={disabled}
-      onClick={onClick}
-      className={c("wrapper", size, { disabled }, type)}
-    >
+    <button onClick={onClick} className={c("button", size, { disabled }, type)}>
       {loading && (
         <img className={c("icon", { loading })} src={Loader} alt="loading" />
       )}
       {children}
-    </div>
+    </button>
   );
 };
 
