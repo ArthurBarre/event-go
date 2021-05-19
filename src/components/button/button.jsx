@@ -6,12 +6,12 @@ import Loader from "../../assets/loader.inline.svg";
 
 const c = classNames.bind(styles);
 
-const Button = ({ children, disabled, size, loading, type, onClick }) => {
+const Button = ({ children, disabled, loading, type, onClick }) => {
   return (
     <button
       disabled={disabled}
       onClick={onClick}
-      className={c("button", size, { disabled }, type)}
+      className={c("button", { disabled }, type)}
     >
       {loading && !disabled && <Loader className={c("icon", type)} />}
       {children}
@@ -25,14 +25,12 @@ Button.propTypes = {
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func.isRequired,
   loading: PropTypes.bool,
-  size: PropTypes.string,
   type: PropTypes.string,
   disabled: PropTypes.bool,
 };
 
 Button.defaultProps = {
   type: "primary",
-  size: "normal",
   loading: false,
   disabled: false,
 };
