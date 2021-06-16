@@ -1,12 +1,12 @@
-import React from "react";
 import classNames from "classnames/bind";
+import React from "react";
 import * as styles from "./input.module.scss";
 
 const c = classNames.bind(styles);
 
-const Input = ({ value, onChange, type, label, placeholder, required }) => {
+const Input = ({ value, onChange, type, label, placeholder, required, className }) => {
   return (
-    <div className={c("btnWrapper")}>
+    <div className={c("wrapper", className)}>
       <label htmlFor="input">{label}</label>
       <input
         required={required}

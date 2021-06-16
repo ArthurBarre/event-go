@@ -1,7 +1,8 @@
-import React, { useState } from "react";
 import classNames from "classnames/bind";
-import * as styles from "./index.module.scss";
+import { StaticImage } from "gatsby-plugin-image";
+import React, { useState } from "react";
 import UsersContext from "../store/users-context";
+import * as styles from "./index.module.scss";
 
 const c = classNames.bind(styles);
 
@@ -13,6 +14,11 @@ const IndexPage = ({ children }) => {
   return (
     <UsersContext.Provider value={{ users, setUsers }}>
       <main className={c("wrapper")}>
+        <StaticImage
+          className={c("image")}
+          src="../images/illu.png"
+          alt="illu"
+        />
         {children}
       </main>
     </UsersContext.Provider>

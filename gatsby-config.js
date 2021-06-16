@@ -1,3 +1,5 @@
+const subset = `!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_\`abcdefghijklmnopqrstuvwxyz{|}~¢£¥¨©«®´¸»ÀÂÆÇÈÉÊËÎÏÔÙÛÜàâæçèéêëîïôùûüÿŒœŸˆ˚˜–—‘’‚“”„•…‹›€™ `;
+
 module.exports = {
   siteMetadata: {
     title: "event-and-go.front",
@@ -15,6 +17,21 @@ module.exports = {
         icon: "src/images/icon.png",
       },
     },
+    {
+      resolve: 'gatsby-plugin-webfonts',
+      options: {
+        fonts: {
+          google: [
+            {
+              family: 'Helvetica',
+              variants: ['300', '400', '600', '700', '800', '900'],
+              text: subset,
+            },
+          ],
+        },
+      },
+    },
+
     {
       resolve: "gatsby-plugin-react-svg",
       options: {

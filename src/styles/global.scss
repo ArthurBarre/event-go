@@ -1,117 +1,191 @@
 @import "variables";
 @import "destyle.css";
 
-
-
 html {
-	--scrollbar-width: 12px;
+    --scrollbar-width: 12px;
 
-	color: black;
-	font-size: 10px;
-	font-family: $termina;
-	background-color: $white;
-	-webkit-font-smoothing: antialiased;
-	font-smoothing: antialiased;
+    color: black;
+    font-size: 10px;
+    font-family: $helvetica;
+    background-color: white;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
 
-	overflow-x: hidden;
-	overflow-y: scroll;
-	overflow-y: overlay;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    overflow-y: overlay;
 
-	-webkit-tap-highlight-color: rgba($primary, 0.1);
+    -webkit-tap-highlight-color: rgba(var(--app-base), 0.1);
 
-	::selection {
-		color: $primary;
-		background-color: $secondary;
-	}
+    ::selection {
+        color: var(--app-base);
+        background-color: var(--secondary-base);
+    }
 }
 
 // Scrollbar
 body,
 html {
-	scrollbar-width: thin;
-	scrollbar-color: $white $secondary;
+    scrollbar-width: thin;
+    scrollbar-color: white var(--secondary-base);
 }
 ::-webkit-scrollbar {
-	width: var(--scrollbar-width);
+    width: var(--scrollbar-width);
 }
 ::-webkit-scrollbar-track {
-	background: $white;
+    background: white;
 }
 ::-webkit-scrollbar-thumb {
-	background-color: mix($white, $secondary, 20);
-	border-radius: 10px;
-	border: 4px solid $white;
+    background-color: var(--secondary-base);
+    border-radius: 10px;
+    border: 4px solid white;
 
-	&:hover {
-		background-color: $secondary;
-	}
+    &:hover {
+        background-color: var(--secondary-base);
+    }
 }
 ::-webkit-scrollbar-corner {
-	display: none;
+    display: none;
 }
-
-
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	/* vertical-align: baseline; */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    /* vertical-align: baseline; */
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+    list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
 }
 
 button {
-  -webkit-appearance: none;
-  border: white;
-  background-color: transparent;
+    -webkit-appearance: none;
+    border: white;
+    background-color: transparent;
 }
 
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
-a {text-decoration:none;}
-
-
-
-
-
+a {
+    text-decoration: none;
+}

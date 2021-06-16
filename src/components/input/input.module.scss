@@ -1,39 +1,39 @@
 @import "src/styles/variables";
 
-.btnWrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 8px;
-  /* Neutral/White */
-  background: #ffffff;
-  /* GreyShadow/1 */
-  box-shadow: 0px 2px 8px rgba(128, 128, 128, 0.12);
-  border-radius: 8px;
-  // a virer
-  grid-column: 1/3;
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 8px;
+    /* Neutral/White */
+    background: #ffffff;
+    /* GreyShadow/1 */
+    box-shadow: 0px 2px 8px rgba(128, 128, 128, 0.12);
+    border-radius: 8px;
+    // a virer
+    grid-column: 1/3;
 }
 
 label {
-  @include xSmall;
-  color: $neutral300;
-  padding-bottom: 8px;
+    @include xSmall;
+    color: var(--neutral-600);
+    padding-bottom: 8px;
 }
 
 ::placeholder {
-  @include bodyM;
-  color: $neutral300;
+    @include bodyM;
+    color: var(--neutral-600);
 }
 
 .isPassword {
-  &:after {
-    content: "";
-    display: block;
-    background: url("../../assets/icon/hide-password.svg") no-repeat;
-    width: 20px;
-    height: 20px;
-    float: left;
-    margin: 0 6px 0 0;
-  }
+    &:after {
+        content: "";
+        display: block;
+        background: url("../../assets/icon/hide-password.svg") no-repeat;
+        width: 20px;
+        height: 20px;
+        float: left;
+        margin: 0 6px 0 0;
+    }
 }

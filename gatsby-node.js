@@ -2,12 +2,17 @@ exports.createPages = async ({ actions }) => {
 	const { createPage } = actions;
 
 	createPage({
-		path: "/login",
-		component: require.resolve("./src/pages/Login/Login.jsx"),
+		path: "/",
+		component: require.resolve("./src/pages/SignIn/SignIn.jsx"),
 	});
 
 	createPage({
-		path: "/",
-		component: require.resolve("./src/pages/SignIn/SignIn.jsx"),
+		path: "/forgot-password",
+		component: require.resolve("./src/pages/PasswordReset/PasswordReset.jsx"),
+	});
+
+	createPage({
+		path: "/register",
+		component: require.resolve("./src/pages/Register/Register.jsx"),
 	});
 };

@@ -1,5 +1,21 @@
 @import "src/styles/variables";
 
 .wrapper {
-	@include grid;
+    @include media(">tablet") {
+        @include grid;
+    }
+}
+
+.image {
+    display: table;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 16px;
+
+    @include media(">tablet") {
+        width: 100%;
+        grid-column: 8/12;
+        grid-row: 1;
+        margin-top: 0;
+    }
 }

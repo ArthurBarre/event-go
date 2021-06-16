@@ -1,78 +1,78 @@
 @use "sass:math";
 
 @mixin mouse {
-  @media (pointer: fine) {
-    @content;
-  }
+    @media (pointer: fine) {
+        @content;
+    }
 }
 
 @mixin touch {
-  @media (pointer: coarse), (pointer: none) {
-    @content;
-  }
+    @media (pointer: coarse), (pointer: none) {
+        @content;
+    }
 }
 
 @mixin safari {
-  @media screen and (min-color-index: 0) and(-webkit-min-device-pixel-ratio:0) {
-    @content;
-  }
+    @media screen and (min-color-index: 0) and(-webkit-min-device-pixel-ratio:0) {
+        @content;
+    }
 }
 
 @mixin grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 16px;
-  margin-left: 7.5%;
-  margin-right: 7.5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 16px;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
 
-  @include media(">tablet") {
-    grid-template-columns: repeat(12, minmax(0px, 111px));
-    column-gap: 24px;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
+    @include media(">tablet") {
+        grid-template-columns: repeat(12, minmax(0px, 111px));
+        column-gap: 24px;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
 }
 
 @mixin title {
-  font-family: $termina;
-  font-size: 40px;
-  font-weight: 600;
+    font-family: $helvetica;
+    font-size: 40px;
+    font-weight: 600;
 }
 
 @mixin buttonPrimary {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 @mixin title {
-  font-family: $termina;
-  font-size: 40px;
-  font-weight: 600;
+    font-family: $helvetica;
+    font-size: 40px;
+    font-weight: 600;
 }
 
 @mixin xSmall {
-  font-family: $termina;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 10px;
-  line-height: 11px;
-  letter-spacing: 0.5px;
+    font-family: $helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 11px;
+    letter-spacing: 0.5px;
 }
 
 @mixin bodyM {
-  font-family: $termina;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 18px;
-  display: flex;
-  align-items: flex-end;
-  letter-spacing: 0.5px;
+    font-family: $helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: 0.5px;
 }
 
 @mixin offset-margin($margin, $value) {
-  margin-#{$margin}: $value;
+    margin-#{$margin}: $value;
 }
